@@ -1,0 +1,13 @@
+{
+  "name": "stellafrique-frontend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node ./node_modules/@nuxt/cli/bin/nuxi.mjs dev",
+    "build": "node ./node_modules/@nuxt/cli/bin/nuxi.mjs build",
+    "preview": "node ./node_modules/@nuxt/cli/bin/nuxi.mjs preview"
+  },
+  "dependencies": {
+    "nuxt": "^3.16.2"
+  }
+}
