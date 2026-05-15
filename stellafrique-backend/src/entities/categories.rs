@@ -5,12 +5,14 @@ use sea_orm::entity::prelude::*;
 pub struct Model {
     #[sea_orm(primary_key, auto_increment = false)]
     pub id: Uuid,
-    pub parent_id: Option<Uuid>,
     pub name: String,
     pub slug: String,
+    pub description: Option<String>,
     pub image_url: Option<String>,
-    pub sort_order: i32,
     pub is_active: bool,
+    pub sort_order: i32,
+    pub created_at: DateTimeWithTimeZone,
+    pub updated_at: DateTimeWithTimeZone,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

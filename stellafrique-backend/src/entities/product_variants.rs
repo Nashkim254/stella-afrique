@@ -6,15 +6,16 @@ pub struct Model {
     #[sea_orm(primary_key, auto_increment = false)]
     pub id: Uuid,
     pub product_id: Uuid,
+    pub name: String,
+    pub sku: String,
     pub size: Option<String>,
     pub color: Option<String>,
-    pub color_hex: Option<String>,
     pub price: Decimal,
     pub compare_at_price: Option<Decimal>,
-    pub stock_qty: i32,
-    pub low_stock_threshold: i32,
-    pub sku: String,
+    pub stock_quantity: i32,
     pub is_active: bool,
+    pub created_at: DateTimeWithTimeZone,
+    pub updated_at: DateTimeWithTimeZone,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -26,12 +27,20 @@ pub enum Relation {
         on_update = "NoAction",
         on_delete = "Cascade"
     )]
-    Products,
+    Product,
+    #[sea_orm(has_many = "super::product_images::Entity")]
+    ProductImages,
 }
 
 impl Related<super::products::Entity> for Entity {
     fn to() -> RelationDef {
-        Relation::Products.def()
+        Relation::Product.def()
+    }
+}
+
+impl Related<super::product_images::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::ProductImages.def()
     }
 }
 

@@ -7,11 +7,12 @@ pub struct Model {
     pub id: Uuid,
     pub product_id: Uuid,
     pub variant_id: Option<Uuid>,
-    pub public_id: String,
-    pub url: String,
+    pub image_url: String,
     pub alt_text: Option<String>,
-    pub is_primary: bool,
     pub sort_order: i32,
+    pub is_primary: bool,
+    pub created_at: DateTimeWithTimeZone,
+    pub updated_at: DateTimeWithTimeZone,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -23,12 +24,26 @@ pub enum Relation {
         on_update = "NoAction",
         on_delete = "Cascade"
     )]
-    Products,
+    Product,
+    #[sea_orm(
+        belongs_to = "super::product_variants::Entity",
+        from = "Column::VariantId",
+        to = "super::product_variants::Column::Id",
+        on_update = "NoAction",
+        on_delete = "SetNull"
+    )]
+    ProductVariant,
 }
 
 impl Related<super::products::Entity> for Entity {
     fn to() -> RelationDef {
-        Relation::Products.def()
+        Relation::Product.def()
+    }
+}
+
+impl Related<super::product_variants::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::ProductVariant.def()
     }
 }
 

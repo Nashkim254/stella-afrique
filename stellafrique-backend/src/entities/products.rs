@@ -8,13 +8,10 @@ pub struct Model {
     pub category_id: Option<Uuid>,
     pub name: String,
     pub slug: String,
+    pub short_description: Option<String>,
     pub description: Option<String>,
-    pub care_instructions: Option<String>,
-    pub brand: Option<String>,
-    pub is_active: bool,
+    pub status: String,
     pub is_featured: bool,
-    pub avg_rating: Decimal,
-    pub review_count: i32,
     pub created_at: DateTimeWithTimeZone,
     pub updated_at: DateTimeWithTimeZone,
 }
@@ -28,7 +25,7 @@ pub enum Relation {
         on_update = "NoAction",
         on_delete = "SetNull"
     )]
-    Categories,
+    Category,
     #[sea_orm(has_many = "super::product_variants::Entity")]
     ProductVariants,
     #[sea_orm(has_many = "super::product_images::Entity")]
@@ -37,7 +34,7 @@ pub enum Relation {
 
 impl Related<super::categories::Entity> for Entity {
     fn to() -> RelationDef {
-        Relation::Categories.def()
+        Relation::Category.def()
     }
 }
 
