@@ -1,0 +1,30 @@
+:root {
+  --pink: #fb2e86;
+  --pink-gradient-start: #fa3be5;
+  --pink-gradient-end: #ff289f;
+  --violet: #7e33e0;
+  --button-lilac: #e0d3f5;
+  --subtext: #8a8fb9;
+  --page-text: #151875;
+  --section-hover: #2f1ac4;
+  --sky-blue: #00c1fe;
+  --sky-blue-gradient-start: #46d9ff;
+  --sky-blue-gradient-end: #19a5f9;
+  --mint-gradient-start: #36e6d5;
+  --mint-gradient-end: #29e871;
+  --blue-gradient-start: #1389ff;
+  --blue-gradient-end: #1db4e7;
+  --price-tag: #fb2448;
+  --sale-tag: #3f509e;
+  --soft-purple: #9f63b5;
+  --surface: #ffffff;
+  --bg-shade: #eeeffb;
+  --linear-bg-start: #f3f9ff;
+  --linear-bg-end: #f1f0ff;
+  --footer-bg: #eeeffb;
+  --border: rgba(21, 24, 117, 0.1);
+  --shadow: 0 18px 50px rgba(21, 24, 117, 0.08);
+  --shadow-soft: 0 10px 28px rgba(21, 24, 117, 0.06);
+  --radius-card: 18px;
+  --radius-media: 20px;
+}

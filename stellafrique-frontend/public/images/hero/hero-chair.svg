@@ -1,0 +1,16 @@
+<svg width="720" height="720" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="720" rx="48" fill="#F3F9FF"/>
+  <circle cx="400" cy="360" r="200" fill="#F1F0FF"/>
+  <circle cx="400" cy="360" r="168" fill="#EEEFFB"/>
+  <path d="M314 292C314 250 348 216 390 216H412C472 216 520 264 520 324V378C520 444 466 498 400 498H390C348 498 314 464 314 422V292Z" fill="#F7C6D7"/>
+  <path d="M324 320C324 276 360 240 404 240C448 240 484 276 484 320V424C484 449 463 470 438 470H370C345 470 324 449 324 424V320Z" fill="#FFE5EF"/>
+  <path d="M360 262C380 248 404 241 428 241C452 241 476 248 496 262" stroke="#F3B3CA" stroke-width="18" stroke-linecap="round"/>
+  <path d="M348 286C365 272 385 266 404 266C423 266 443 272 460 286" stroke="#F3B3CA" stroke-width="18" stroke-linecap="round"/>
+  <path d="M336 316C354 302 378 294 404 294C430 294 454 302 472 316" stroke="#F3B3CA" stroke-width="18" stroke-linecap="round"/>
+  <path d="M366 490L352 604" stroke="#C98A2F" stroke-width="10" stroke-linecap="round"/>
+  <path d="M450 490L466 604" stroke="#C98A2F" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="560" cy="170" r="74" fill="#00C1FE"/>
+  <text x="560" y="160" fill="white" font-size="32" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700">50%</text>
+  <text x="560" y="198" fill="white" font-size="26" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700">OFF</text>
+</svg>
+

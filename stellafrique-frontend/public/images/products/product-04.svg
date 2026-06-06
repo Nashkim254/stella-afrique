@@ -1,0 +1,9 @@
+<svg width="520" height="640" viewBox="0 0 520 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="640" rx="32" fill="#F6F7FB"/>
+  <circle cx="260" cy="244" r="156" fill="#F1F0FF"/>
+  <path d="M182 242C182 196 220 158 266 158C312 158 350 196 350 242V332C350 371 319 402 280 402H252C213 402 182 371 182 332V242Z" fill="#D8D9E4"/>
+  <path d="M220 398L202 494" stroke="#AF8652" stroke-width="12" stroke-linecap="round"/>
+  <path d="M306 398L324 494" stroke="#AF8652" stroke-width="12" stroke-linecap="round"/>
+  <text x="260" y="564" fill="#151875" font-size="34" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700">Stellafrique</text>
+</svg>
+

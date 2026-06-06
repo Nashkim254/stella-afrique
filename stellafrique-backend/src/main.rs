@@ -1,15 +1,7 @@
-mod app;
-mod config;
-mod entities;
-mod error;
-mod routes;
-mod state;
-
 use anyhow::Context;
-use app::build_app;
-use config::Config;
 use sea_orm::{ConnectOptions, Database};
 use std::time::Duration;
+use stellafrique_backend::{app::build_app, auth, config::Config};
 use tokio::net::TcpListener;
 use tracing::info;
 use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
@@ -32,6 +24,10 @@ async fn main() -> anyhow::Result<()> {
     let db = Database::connect(options)
         .await
         .context("failed to connect to postgres")?;
+
+    auth::bootstrap_admin_staff(&db, config.admin_auth.as_ref())
+        .await
+        .context("failed to bootstrap admin staff")?;
 
     let app = build_app(config.clone(), db);
     let listener = TcpListener::bind(config.bind_addr())

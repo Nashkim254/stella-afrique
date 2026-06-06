@@ -1,4 +1,11 @@
 pub mod categories;
+pub mod inventory_events;
+pub mod order_events;
+pub mod order_items;
+pub mod orders;
 pub mod product_images;
 pub mod product_variants;
 pub mod products;
+pub mod staff_users;
+pub mod users;
+pub mod withdrawals;
